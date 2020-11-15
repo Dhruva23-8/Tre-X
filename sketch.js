@@ -72,12 +72,13 @@ function draw() {
   //trex.debug = true;
   background(150);
   text("Score: "+ score, 500,50);
-  
+  text(Nitin is noob);
+
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
   
-    if(keyDown("space") && trex.y >= 159) {
+    if(mousePressedOver(canvas) && trex.y >= 159) {
       trex.velocityY = -12;
     }
   
